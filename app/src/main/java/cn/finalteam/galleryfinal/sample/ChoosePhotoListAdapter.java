@@ -16,6 +16,7 @@
 
 package cn.finalteam.galleryfinal.sample;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -67,6 +68,7 @@ public class ChoosePhotoListAdapter extends BaseAdapter {
                 .showImageForEmptyUri(R.drawable.ic_gf_default_photo)
                 .showImageOnLoading(R.drawable.ic_gf_default_photo).build();
 
+        @SuppressLint({"ViewHolder", "InflateParams"})
         ImageView ivPhoto = (ImageView) mInflater.inflate(R.layout.adapter_photo_list_item, null);
         setHeight(ivPhoto);
 

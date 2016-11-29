@@ -54,82 +54,195 @@ public class MainActivity extends AppCompatActivity {
     private final int REQUEST_CODE_CROP = 1002;
     private final int REQUEST_CODE_EDIT = 1003;
 
+    /**
+     * UIL
+     */
     @Bind(R.id.rb_uil)
     RadioButton mRbUil;
+    /**
+     * Glide
+     */
     @Bind(R.id.rb_glide)
     RadioButton mRbGlide;
+    /**
+     * Picasso
+     */
     @Bind(R.id.rb_picasso)
     RadioButton mRbPicasso;
-    @Bind(R.id.rb_single_select)
-    RadioButton mRbSingleSelect;
-    @Bind(R.id.rb_muti_select)
-    RadioButton mRbMutiSelect;
-    @Bind(R.id.et_max_size)
-    EditText mEtMaxSize;
-    @Bind(R.id.btn_open_gallery)
-    Button mBtnOpenGallery;
-    @Bind(R.id.lv_photo)
-    HorizontalListView mLvPhoto;
-    @Bind(R.id.cb_edit)
-    CheckBox mCbEdit;
-    @Bind(R.id.cb_crop)
-    CheckBox mCbCrop;
-    @Bind(R.id.cb_rotate)
-    CheckBox mCbRotate;
-    @Bind(R.id.cb_show_camera)
-    CheckBox mCbShowCamera;
-    @Bind(R.id.ll_max_size)
-    LinearLayout mLlMaxSize;
-    @Bind(R.id.ll_edit)
-    LinearLayout mLlEdit;
-    @Bind(R.id.rb_xutils)
-    RadioButton mRbXutils;
-    @Bind(R.id.rb_xutils3)
-    RadioButton mRbXutils3;
-    @Bind(R.id.et_crop_width)
-    EditText mEtCropWidth;
-    @Bind(R.id.et_crop_height)
-    EditText mEtCropHeight;
-    @Bind(R.id.ll_crop_size)
-    LinearLayout mLlCropSize;
-    @Bind(R.id.cb_crop_square)
-    CheckBox mCbCropSquare;
-    @Bind(R.id.rb_theme_default)
-    RadioButton mRbThemeDefault;
-    @Bind(R.id.rb_theme_dark)
-    RadioButton mRbThemeDark;
-    @Bind(R.id.rb_theme_cyan)
-    RadioButton mRbThemeCyan;
-    @Bind(R.id.rb_theme_orange)
-    RadioButton mRbThemeOrange;
-    @Bind(R.id.rb_theme_green)
-    RadioButton mRbThemeGreen;
-    @Bind(R.id.rb_theme_teal)
-    RadioButton mRbThemeTeal;
-    @Bind(R.id.rb_theme_custom)
-    RadioButton mRbThemeCustom;
-    @Bind(R.id.cb_crop_replace_source)
-    CheckBox mCbCropReplaceSource;
-    @Bind(R.id.cb_rotate_replace_source)
-    CheckBox mCbRotateReplaceSource;
-    @Bind(R.id.cb_open_force_crop)
-    CheckBox mCbOpenForceCrop;
-    @Bind(R.id.cb_open_force_crop_edit)
-    CheckBox mCbOpenForceCropEdit;
-    @Bind(R.id.ll_force_crop)
-    LinearLayout mLlForceCrop;
-    @Bind(R.id.toolbar)
-    Toolbar mToolbar;
+    /**
+     * Fresco
+     */
     @Bind(R.id.rb_fresco)
     RadioButton mRbFresco;
+    /**
+     * xUtils
+     */
+    @Bind(R.id.rb_xutils)
+    RadioButton mRbXutils;
+    /**
+     * xUtils3
+     */
+    @Bind(R.id.rb_xutils3)
+    RadioButton mRbXutils3;
+    /**
+     * 单选
+     */
+    @Bind(R.id.rb_single_select)
+    RadioButton mRbSingleSelect;
+    /**
+     * 多选
+     */
+    @Bind(R.id.rb_muti_select)
+    RadioButton mRbMutiSelect;
+    /**
+     * 填写选择图片的最大数量
+     */
+    @Bind(R.id.et_max_size)
+    EditText mEtMaxSize;
+    /**
+     * 打开选择按钮
+     */
+    @Bind(R.id.btn_open_gallery)
+    Button mBtnOpenGallery;
+    /**
+     * 横向滑动组件
+     */
+    @Bind(R.id.lv_photo)
+    HorizontalListView mLvPhoto;
+    /**
+     * 是否可编辑
+     */
+    @Bind(R.id.cb_edit)
+    CheckBox mCbEdit;
+    /**
+     * 是否裁剪
+     */
+    @Bind(R.id.cb_crop)
+    CheckBox mCbCrop;
+    /**
+     * 是否旋转
+     */
+    @Bind(R.id.cb_rotate)
+    CheckBox mCbRotate;
+    /**
+     * 是否显示相机
+     */
+    @Bind(R.id.cb_show_camera)
+    CheckBox mCbShowCamera;
+    /**
+     * 填写选择图片最大数量的布局
+     */
+    @Bind(R.id.ll_max_size)
+    LinearLayout mLlMaxSize;
+    /**
+     * 编辑选项的布局
+     */
+    @Bind(R.id.ll_edit)
+    LinearLayout mLlEdit;
+    /**
+     * 裁剪的宽度
+     */
+    @Bind(R.id.et_crop_width)
+    EditText mEtCropWidth;
+    /**
+     * 裁剪的高度
+     */
+    @Bind(R.id.et_crop_height)
+    EditText mEtCropHeight;
+    /**
+     * 裁剪高度和宽度的布局
+     */
+    @Bind(R.id.ll_crop_size)
+    LinearLayout mLlCropSize;
+    /**
+     * 是否裁剪为正方形
+     */
+    @Bind(R.id.cb_crop_square)
+    CheckBox mCbCropSquare;
+    /**
+     * Default主题
+     */
+    @Bind(R.id.rb_theme_default)
+    RadioButton mRbThemeDefault;
+    /**
+     * Dark主题
+     */
+    @Bind(R.id.rb_theme_dark)
+    RadioButton mRbThemeDark;
+    /**
+     * Cyan主题
+     */
+    @Bind(R.id.rb_theme_cyan)
+    RadioButton mRbThemeCyan;
+    /**
+     * Orange主题
+     */
+    @Bind(R.id.rb_theme_orange)
+    RadioButton mRbThemeOrange;
+    /**
+     * Green主题
+     */
+    @Bind(R.id.rb_theme_green)
+    RadioButton mRbThemeGreen;
+    /**
+     * Teal主题
+     */
+    @Bind(R.id.rb_theme_teal)
+    RadioButton mRbThemeTeal;
+    /**
+     * Custom主题
+     */
+    @Bind(R.id.rb_theme_custom)
+    RadioButton mRbThemeCustom;
+    /**
+     * 裁剪是否覆盖原图
+     */
+    @Bind(R.id.cb_crop_replace_source)
+    CheckBox mCbCropReplaceSource;
+    /**
+     * 旋转是否覆盖原图
+     */
+    @Bind(R.id.cb_rotate_replace_source)
+    CheckBox mCbRotateReplaceSource;
+    /**
+     * 是否强制裁剪
+     */
+    @Bind(R.id.cb_open_force_crop)
+    CheckBox mCbOpenForceCrop;
+    /**
+     * 强制裁剪后是否可编辑
+     */
+    @Bind(R.id.cb_open_force_crop_edit)
+    CheckBox mCbOpenForceCropEdit;
+    /**
+     * 是否强制裁剪的布局
+     */
+    @Bind(R.id.ll_force_crop)
+    LinearLayout mLlForceCrop;
+    /**
+     * Toolbar
+     */
+    @Bind(R.id.toolbar)
+    Toolbar mToolbar;
+    /**
+     *是否启动预览
+     */
     @Bind(R.id.cb_preview)
     CheckBox mCbPreview;
+    /**
+     * 是否关闭动画
+     */
     @Bind(R.id.cb_no_animation)
     CheckBox mCbNoAnimation;
 
+    /**
+     * Adapter数据源
+     */
     private List<PhotoInfo> mPhotoList;
+    /**
+     * Adapter
+     */
     private ChoosePhotoListAdapter mChoosePhotoListAdapter;
-    private Button mOpenGallery;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -140,11 +253,9 @@ public class MainActivity extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        mLvPhoto = (HorizontalListView) findViewById(R.id.lv_photo);
         mPhotoList = new ArrayList<>();
         mChoosePhotoListAdapter = new ChoosePhotoListAdapter(this, mPhotoList);
         mLvPhoto.setAdapter(mChoosePhotoListAdapter);
-        mOpenGallery = (Button) findViewById(R.id.btn_open_gallery);
         mRbMutiSelect.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -205,7 +316,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-        mOpenGallery.setOnClickListener(new View.OnClickListener() {
+        mBtnOpenGallery.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -261,7 +372,7 @@ public class MainActivity extends AppCompatActivity {
                     pauseOnScrollListener = new PicassoPauseOnScrollListener(false, true);
                 }
 
-                boolean muti = false;
+                boolean muti;
                 if (mRbSingleSelect.isChecked()) {
                     muti = false;
                 } else {

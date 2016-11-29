@@ -17,6 +17,7 @@
 package cn.finalteam.galleryfinal;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -488,6 +489,7 @@ public class PhotoSelectActivity extends PhotoBaseActivity implements View.OnCli
         }
     }
 
+    @SuppressLint("StringFormatMatches")
     public void refreshSelectCount() {
         mTvChooseCount.setText(getString(R.string.selected, mSelectPhotoList.size(), GalleryFinal.getFunctionConfig().getMaxSize()));
         if ( mSelectPhotoList.size() > 0 && GalleryFinal.getFunctionConfig().isMutiSelect() ) {
